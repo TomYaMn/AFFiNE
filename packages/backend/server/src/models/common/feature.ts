@@ -97,8 +97,8 @@ const FreeFeature = {
   configs: {
     // quota name
     name: 'Free',
-    blobLimit: 10 * OneMB,
-    businessBlobLimit: 100 * OneMB,
+    blobLimit: 10 * OneGB,
+    businessBlobLimit: 100 * OneGB,
     storageQuota: 10 * OneGB,
     historyPeriod: 7 * OneDay,
     memberLimit: 3,
@@ -110,10 +110,10 @@ const ProFeature = {
   type: FeatureType.Quota,
   configs: {
     name: 'Pro',
-    blobLimit: 100 * OneMB,
-    storageQuota: 100 * OneGB,
+    blobLimit: 100 * OneGB,
+    storageQuota: 5000 * OneGB,
     historyPeriod: 30 * OneDay,
-    memberLimit: 10,
+    memberLimit: 100,
     copilotActionLimit: 10,
   },
 } as const;
@@ -122,10 +122,10 @@ const LifetimeProFeature = {
   type: FeatureType.Quota,
   configs: {
     name: 'Lifetime Pro',
-    blobLimit: 100 * OneMB,
-    storageQuota: 1024 * OneGB,
+    blobLimit: 100 * OneGB,
+    storageQuota: 5000 * OneGB,
     historyPeriod: 30 * OneDay,
-    memberLimit: 10,
+    memberLimit: 100,
     copilotActionLimit: 10,
   },
 } as const;
@@ -134,11 +134,11 @@ const TeamFeature = {
   type: FeatureType.Quota,
   configs: {
     name: 'Team Workspace',
-    blobLimit: 500 * OneMB,
-    storageQuota: 100 * OneGB,
-    seatQuota: 20 * OneGB,
+    blobLimit: 500 * OneGB,
+    storageQuota: 5000 * OneGB,
+    seatQuota: 500 * OneGB,
     historyPeriod: 30 * OneDay,
-    memberLimit: 1,
+    memberLimit: 100,
   },
 } as const;
 
